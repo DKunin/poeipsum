@@ -21,6 +21,7 @@ var allowCrossDomain = function allowCrossDomain(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
+app.use(express.static('./public'));
 
 app.get('/poeipsum', function (req, res) {
   var lipsum = stream({
