@@ -18,6 +18,7 @@ const allowCrossDomain = function(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(allowCrossDomain);
+app.use(express.static('./public'));
 
 app.get('/poeipsum', function(req,res){
   let lipsum = stream({
@@ -30,3 +31,5 @@ app.get('/poeipsum', function(req,res){
 });
 
 app.listen(PORT);
+
+console.log(`listening on port ${PORT}`);

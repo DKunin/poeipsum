@@ -23,14 +23,12 @@ function getIpsum(paraAmaount = defaultAmount) {
 
 function processRangeChange(e) {
   e.preventDefault();
-  let val = this.value;
-  getIpsum(val);
+  getIpsum(this.value);
 }
 
 function processValueChange(e) {
   e.preventDefault();
-  let val = this.value;
-  label.innerHTML = val;
+  label.innerHTML = this.value;
 }
 
 getIpsum();

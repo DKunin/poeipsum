@@ -15,10 +15,14 @@ Then just run npm build script
 
 To start server:
 
-      node poeipsum5.js
+      npm start      
 
-The default port is 1809 (year of Poe's birht), and the main access point for now is /poeipsum. The front part is not yet build. You can also pass optional parameter ?paragraphs=5 to get more text.
+The default port is 1809 (year of Poe's birth), and the main access point for now is /poeipsum. The front part is not yet build. You can also pass optional parameter ?paragraphs=5 to get more text.
 
 
 That's it)
 
+
+## License
+
+MIT © [Dmitri Kunin](http://dkun.in)

@@ -1,25 +1,26 @@
 {
   "name": "poeipsum",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lorem ipsum from Edgar Allan Poe's Raven",
+  "repository": "git@github.com:DKunin/poeipsum.git",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel --out-file poeipsum5.js < poeipsum.js",
     "build:js": "webpack",
-    "dev": "light-server -s ./public -w 'public/js/source.es6.js, public/css/*.styl # npm run build:js'"
+    "dev": "light-server -s ./public -w 'public/js/source.es6.js, public/css/*.styl # npm run build:js'",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^5.8.21",
     "body-parser": "^1.12.4",
     "express": "^4.12.4",
     "lipsumator": "^1.0.2",
     "ramda": "^0.14.0"
   },
   "devDependencies": {
-    "babel-core": "^5.5.6",
-    "babel-loader": "^5.1.4",
     "css-loader": "^0.14.5",
     "file-loader": "^0.8.4",
     "light-server": "^1.0.3",
