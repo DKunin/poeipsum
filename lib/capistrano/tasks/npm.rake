@@ -4,7 +4,7 @@ namespace :npm do
   task :install do
     on roles(:app) do
       within current_path do
-        execute 'cd /home/deploy/apps/poeipsum/current && /usr/local/bin/npm install'
+        execute 'cd /home/deploy/apps/poeipsum/current && /usr/local/bin/npm install --production'
       end
     end
   end
