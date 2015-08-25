@@ -10,7 +10,7 @@ namespace :deploy do
 
   desc 'Install npm'
   task :npm do
-     invoke 'npm:install'
+     invoke 'assets:sync_vendor'
   end
 
   desc 'Restart application'
