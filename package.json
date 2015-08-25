@@ -1,6 +1,6 @@
 {
   "name": "poeipsum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lorem ipsum from Edgar Allan Poe's Raven",
   "repository": "git@github.com:DKunin/poeipsum.git",
   "main": "index.js",
@@ -23,7 +23,6 @@
   "devDependencies": {
     "css-loader": "^0.14.5",
     "file-loader": "^0.8.4",
-    "light-server": "^1.0.3",
     "node-libs-browser": "^0.5.2",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.0",
