@@ -5,15 +5,17 @@
 </head>
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
 <body>
+  <div class="bg"> </div>
   <div class="container">
+    <h2>Edgar Poe - Lorem ipsum</h2>
+    <small>Generate Lorem ipsum-like text from his poem "Raven" to be precise.</small>
     <div class="controls">
-      <input type="range" max="15" min="1" id="range" value="3"/>
-      <label id="label"></label>
+      <input type="number" id="paragraphs" name="paragraphs" value="3"/>
+      <a id="submitupdate" class="action-button animate blue">Nevermore!</a>
     </div>
     <div id="text"></div>
   </div>
-
-  <div class="bg"> </div>
+  <div class="footer">© <a href="http://dkun.in">DKunin</a> 2015</div>
 </body>
 <script type="text/javascript" src="js/main.bundle.js"></script>
 </html>

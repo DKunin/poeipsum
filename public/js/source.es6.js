@@ -2,13 +2,13 @@
 
 require('css/style.styl');
 
-let request       = require('superagent');
-let textField     = document.getElementById('text');
-let label         = document.getElementById('label');
-let range         = document.getElementById('range');
+let request     = require('superagent');
+let textField   = document.getElementById('text');
+let curparvalue = document.getElementById('paragraphs');
+let submit      = document.getElementById('submitupdate');
 
 let defaultAmount = 3;
-label.innerHTML   = defaultAmount;
+//label.innerHTML   = defaultAmount;
 
 function processResult(err, res) {
   textField.innerHTML = res.text;
@@ -23,17 +23,12 @@ function getIpsum(paraAmaount = defaultAmount) {
 
 function processRangeChange(e) {
   e.preventDefault();
-  getIpsum(this.value);
-}
-
-function processValueChange(e) {
-  e.preventDefault();
-  label.innerHTML = this.value;
+  console.log(curparvalue.value);
+  getIpsum(curparvalue.value);
 }
 
 getIpsum();
 
-range.addEventListener('change', processRangeChange , false);
-range.addEventListener('input', processValueChange , false);
+submit.addEventListener('click', processRangeChange , false);
 
 console.log('asd');
