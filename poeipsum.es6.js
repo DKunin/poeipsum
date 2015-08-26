@@ -7,6 +7,7 @@ const app        = express();
 const PORT       = 1809;
 const dictionary = require('./dictionary');
 const R          = require('ramda');
+const stylus     = require('stylus');
 
 const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -14,6 +15,13 @@ const allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 };
+
+app.use(stylus.middleware({
+  src: __dirname + '/public',
+  dest: __dirname + '/public',
+  debug: true,
+  force: true
+}));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
