@@ -38,6 +38,28 @@ app.get('/poeipsum', function(req,res){
   lipsum.pipe(res);
 });
 
+var giantHead = '            ___          \n\r'+
+                '        . -^   `--,      \n\r'+
+                '       /# =========`-_   \n'+
+                '      /# (--====___====\\ \n'+
+                '     /#   .- --.  . --.| \n'+
+                '    /##   |  * ) (   * ),\n'+
+                '    |##   \\    /\\ \\   / |\n'+
+                '    |###   ---   \\ ---  |\n'+
+                '    |####      ___)    #|\n'+
+                '    |######           ##|\n'+
+                '     \\##### ---------- / \n'+
+                '      \\####           (  \n'+
+                '       `\\###          |  \n'+
+                '         \\###         |  \n'+
+                '          \\##        |   \n'+
+                '           \\###.    .)   \n'+
+                '            `======/     ';
+
+app.get('/shwifty', function(req,res){
+  res.send(giantHead);
+});
+
 app.listen(PORT);
 
 console.log(`listening on port ${PORT}`);
