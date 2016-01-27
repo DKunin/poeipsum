@@ -60,6 +60,10 @@ app.get('/shwifty', function(req,res){
   res.send(giantHead);
 });
 
+app.get('/shwifty2', function(req,res){
+  res.send(giantHead + 'yws');
+});
+
 app.listen(PORT);
 
 console.log(`listening on port ${PORT}`);
