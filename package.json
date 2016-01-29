@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:js": "webpack",
     "dev": "light-server -s ./public -w 'public/js/source.es6.js, public/css/*.styl # npm run build:js'",
-    "start": "node poeipsum.js"
+    "start": "node poeipsum.js",
+    "deploy": "cap production deploy"
   },
   "author": "",
   "license": "MIT",
