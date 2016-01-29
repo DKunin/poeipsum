@@ -1,15 +1,15 @@
 'use strict';
 
-const { stream } = require('lipsumator');
-const express    = require('express');
-const bodyParser = require('body-parser');
-const app        = express();
-const PORT       = 1809;
-const dictionary = require('./dictionary');
-const R          = require('ramda');
-const stylus     = require('stylus');
+var lipsumator = require('lipsumator');
+var express    = require('express');
+var bodyParser = require('body-parser');
+var app        = express();
+var PORT       = 1809;
+var dictionary = require('./dictionary');
+var R          = require('ramda');
+var stylus     = require('stylus');
 
-const allowCrossDomain = function(req, res, next) {
+var allowCrossDomain = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'POST');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
@@ -29,7 +29,7 @@ app.use(allowCrossDomain);
 app.use(express.static('./public'));
 
 app.get('/poeipsum', function(req,res){
-  let lipsum = stream({
+  var lipsum = lipsumator.stream({
     type: 'paragraphs',
     quantity: req.query.paragraphs?req.query.paragraphs:1,
     concentration: 1,
@@ -66,4 +66,4 @@ app.get('/shwifty2', function(req,res){
 
 app.listen(PORT);
 
-console.log(`listening on port ${PORT}`);
+console.log('listening on port ' +  PORT);

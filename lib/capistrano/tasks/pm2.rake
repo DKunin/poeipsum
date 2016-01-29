@@ -23,7 +23,7 @@ namespace :pm2 do
 
   def start_app
     within current_path do
-      execute '/usr/local/bin/pm2 start ~/apps/poeipsum/current/index.js --name '+$app_name
+      execute '/usr/local/bin/pm2 start ~/apps/poeipsum/current/poeipsum.js --name '+$app_name
     end
   end
 
