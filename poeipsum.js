@@ -42,6 +42,10 @@ app.get('/shwifty', function(req,res){
   res.send('<img src="/assets/show.png" />');
 });
 
+app.get('/test', function(req,res){
+  res.json({ test: true });
+});
+
 app.listen(PORT);
 
 console.log('listening on port ' +  PORT);
