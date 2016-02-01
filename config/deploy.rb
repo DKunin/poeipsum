@@ -13,11 +13,23 @@ namespace :deploy do
      invoke 'assets:sync_vendor'
   end
 
-  desc 'Restart application'
-  task :restart do
-    invoke 'pm2:update'
+  desc 'Stop application'
+  task :stop do
+    invoke 'pm2:stop'
+  end
+
+  desc 'Delete application'
+  task :delete do
+    invoke 'pm2:delete'
+  end
+
+  desc 'Start application'
+  task :start do
+    invoke 'pm2:start'
   end
 
   after :publishing,:npm
-  after :npm, :restart 
+  after :npm, :stop 
+  after :stop, :delete 
+  after :delete, :start 
 end

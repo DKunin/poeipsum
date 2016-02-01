@@ -31,6 +31,11 @@ namespace :pm2 do
     within current_path do
       execute '/usr/local/bin/pm2 stop '+ $app_name
     end
+
+  def delete_app
+    within current_path do
+      execute '/usr/local/bin/pm2 delete '+ $app_name
+    end
   end
 
   desc 'Stop app'
@@ -40,6 +45,12 @@ namespace :pm2 do
     end
   end
 
+  desc 'Stop app'
+  task :delete do
+    on roles(:app) do
+      delete_app
+    end
+  end
 
   desc 'Start'
   task :start do
